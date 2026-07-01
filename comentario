@@ -1,0 +1,68 @@
+:root { /*é usado para declarar variaveis que podem se repetir em outras seleções*/
+    --green: #27ae60; /*adicionamos um tom de verde como padrâo para usa-lo depois*/
+    --black: #192a56; /*adicionamos um tom de preto azulado como padrâo para usa-lo depois*/
+    --light-color: #667; /*adicionamos um tom de cinza azulado como padrâo para usa-lo depois*/
+    --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1); /*definimos uma sombra padrâo para reaprovitalos*/
+}
+*{
+    font-family: 'nunito', sans-serif; /*seleciono a fonte sans-serif*/
+    margin: 0; /*margem externa zerada*/
+    padding: 0; /*margem interna zerada*/
+    box-sizing: border-box; /*adiciona o paddind e a borda sejam incluidos juntos nas modificaçôes de tamanho*/
+    text-decoration: none; /*removemos (none) subinhado (text-decoration)*/
+    border: none; /*estou tirando (none) todo tipo de borda (border) que o codigo vai ter*/
+    text-transform: capitalize; /*deixa a primeira letra de cada palavra (text-transform) em maiuscula (captalize)*/
+    transition: all .2s linear; /*adiciona uma mudança de 2s suave na interaçâo com qualquer elemento*/
+}
+
+header{ /*estilisamos o cabeçlho*/
+    position: fixed; /*fixamos a posiçâo do cabeçalhoao*/
+    top: 0; /*fixamos na vertical ralacionado a position*/
+    left: 0; /*fixamos na horizontal relacionado a position*/
+    right: 0; /*fixamos na horizontal relacionado a position*/
+    background: #fff; /*selecionamos um fundo branco*/
+    padding: 1rem 7%; /*definimos a distãncia interna dos elementos 1rem emcima e baixo e 7% dos lados*/
+    display: flex; /*cria um container flexivel*/
+    align-items: center; /*alinhamos no centro os itens do cabeçalho*/
+    justify-content: space-between; /*alinha os itens na horizontal onde o
+     ultimo item fica na extremidade da pagina e o primeiro no inicio da pagian*/
+    z-index: 1000; /*permitimos que o cabeçalho fique por cima dos outros itens da pagina, 1000 é uma garantaia*/
+    box-shadow: var(--box-shadow); /*apllicamos a sombra definida la no root aqui*/
+}
+
+header .logo{ /*selecionamos o elemento logo dentro do cabeçalho*/
+    color: var(--black); /*adicionamos a cor definida la em cima aqui na logo*/
+    font-size: 2.5rem; /*aumentamos o tamanho da fonte 2.5 vezes maior*/
+    font-weight: bolder; /*adicionamos um negrito na fonte*/
+}
+header .logo i{ /*selecionamos o elemento logo dentro do cabeçalho*/
+    color: var(--green); /*adicionamos a cor definida no root aqui no logo*/
+
+}
+header .navbar a{ /*selecionamos o elemento da classe navbar dentro do cabeçalho para estiliza o link*/
+    font-size: 1.7rem; /*aumentamos o tamanho do texto dos links*/
+    border-radius: .5rem; /*arredondamos os cantos dos links*/
+    padding: .5rem 1.5rem; /*definimos a distancia interna do link*/
+    color: var(--light-color); /*adicionamos a cor definida no root aqui no link*/
+}
+header .navbar a.active, header .navbar a:hover { /*selecionamos muitos elementos e links dentro do cabeçalho e mudamos uma interaçao aos links*/
+    color: #fff; /*adicionamos a cor branca nos textos desses elementos*/
+    background: var(--green); /*definimos a cor ja definida no fundo deses elementos*/
+}
+header .icons i, header .icons a{ /*estilizamos os links do cabeçalho*/
+    cursor: pointer; /*mostra o que é clicabvel quando passamos o cursor*/
+    margin-left: 5rem; /*espaço a esquerda entre os incones*/
+    height: 4.5rem; /*definimos o tamanho do botão*/
+    line-height: 3.5rem; /*ajustamos a distancia e centralizamos o incone verticalmente dentro da caixa*/
+    width: 4.5rem; /*definimos o tamanho do botão*/
+    text-align: center; /*alinhamos os elementos na horizantal*/
+    font-size: 1.7rem; /*aumentamos o tamanho do incone*/
+    color: var(--black); /*adicionamos a cor definida no root aqui*/
+    border-radius: 50%; /*arredonda a caixa*/
+    background: #eee; /*definimos uma cor branca na caixa do incone*/
+} 
+header .icons i:hover, header .icons a:hover{ /*adicionamos os incones e links deeles além do efeito de ao passar o mause nos incones*/
+    color: #fff; /*incone fica branco*/
+    background: var(--green); /*adicionamos a cor definida no root aqui*/
+    transform: rotate(360deg); /*da um efeito animado de um giro de 360 graus*/
+}
