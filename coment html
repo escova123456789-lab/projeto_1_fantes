@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header> <!--isso é um elemento semantico para sinalizar o cabeçalho-->
+        <a href="#" class="logo"><i class="fas fa-utensils"></i></a> <!--link para a classe logo-->
+
+        <nav class="navbar"><!--(nav) elemento semantico para agrupar os links e (class) agrupa todos esses elementos-->
+            <a class="active" href="#home">home</a><!--criamos um link para uma classe -->
+            <a href="#pratos">Pratos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#cardapio">Cardapio</a>
+            <a href="#avaliacao">Avaliacao</a>
+            <a href="#pedido">Pedido</a>
+        </nav>
+        <div class="icons"> <!--criamo sum quadr para a classe incon-->
+            <i class="fas fa-bars" id="manu-bars"></i> <!--deixamos a classe em italico e criamos um id-->
+            <i class="fas fa-search" id="search-icon"></i>
+            <a href="#" class="fas fa-heart"></a> <!--criamos um link para um classe -->
+            <a href="#" class="fas fa-shopping-cart"></a>
+
+      </div>
+    </header>
+
+    <form action="" id="search-form"> <!--criamos uma caixapara fazer o formulario alem de um id-->
+      <input type="search" placeholder="pesquise aqui..." name="" id="search-box"> <!--criamos uma campo de busca por texto e um espaço para digitar-->
+      <label for="search-box" class="fas fa-search"></label> <!--criamos um indentificador para modificar diretamente o botão do form-->
+      <i class="fas fa-times" id="close"></i> <!--fechamos o campo de pesquisa com um botao de enviar e limoar-->
+    </form>
+
+</body>
+</html>
